@@ -24,7 +24,9 @@ namespace PC
                         switch (td)
                         {
                             case 'R': GV.w[i, j] += g / z_d[kd]; break;
-                                //...
+                            case 'C': GV.w[i, j] += g * GV.s * z_d[kd]; break;
+                            case 'L': GV.w[i, j] += g / (GV.s * z_d[kd]); break;
+
                         }
                     }
                 }

@@ -64,7 +64,22 @@ namespace PC
                 GV.in_r[i, 1] = Int32.Parse(s[1]);
                 GV.z_r[i] = Single.Parse(s[2]);
             }
-
+            for (int i = 1; i <= GV.nl; i++)
+            {
+                str = fin.ReadLine();
+                s = str.Split(sep, 3);
+                GV.in_l[i, 0] = Int32.Parse(s[0]);
+                GV.in_l[i, 1] = Int32.Parse(s[1]);
+                GV.z_l[i] = Single.Parse(s[2]);
+            }
+            for (int i = 1; i <= GV.nc; i++)
+            {
+                str = fin.ReadLine();
+                s = str.Split(sep, 3);
+                GV.in_c[i, 0] = Int32.Parse(s[0]);
+                GV.in_c[i, 1] = Int32.Parse(s[1]);
+                GV.z_c[i] = Single.Parse(s[2]);
+            }
             //...
             fin.Close();
 
@@ -86,7 +101,20 @@ namespace PC
                 fout.WriteLine(str);
 
             }
+            for (i = 1; i <= GV.nl; i++)
+            {
+                str = GV.in_l[i, 0].ToString() + " " + GV.in_l[i, 1].ToString() + " "
+                    + GV.z_l[i].ToString();
+                fout.WriteLine(str);
 
+            }
+            for (i = 1; i <= GV.nc; i++)
+            {
+                str = GV.in_c[i, 0].ToString() + " " + GV.in_c[i, 1].ToString() + " "
+                    + GV.z_c[i].ToString();
+                fout.WriteLine(str);
+
+            }
             //...
 
             fout.Close();

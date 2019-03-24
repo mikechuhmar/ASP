@@ -35,7 +35,18 @@ namespace PC
                 ir.Dispose();
             }
             //...
-
+            if (GV.nl > 0)
+            {
+                L il = new L();
+                il.ShowDialog(this);
+                il.Dispose();
+            }
+            if (GV.nc > 0)
+            {
+                C ic = new C();
+                ic.ShowDialog(this);
+                ic.Dispose();
+            }
             DialogResult res = MessageBox.Show("Выводить описание схемы в файл?",
                 "Вывод в файл", MessageBoxButtons.YesNo);
             if (res == DialogResult.Yes)
@@ -143,6 +154,9 @@ namespace PC
                 GV.n = GV.nv;
 
                 form_d(ref GV.in_r, ref GV.z_r, GV.nr, 'R');
+                form_d(ref GV.in_c, ref GV.z_c, GV.nc, 'C');
+                form_d(ref GV.in_l, ref GV.z_l, GV.nl,  'L');
+
                 //...
                 form_s();
                 if ((GV.lp == 1) && (GV.lm == 0) && (GV.kp == 2) && (GV.km == 0))
