@@ -37,11 +37,17 @@
             this.m_nl = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.m_nc = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.m_neu = new System.Windows.Forms.TextBox();
+            this.m_nei = new System.Windows.Forms.TextBox();
+            this.m_ntri = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // OK
             // 
-            this.OK.Location = new System.Drawing.Point(237, 257);
+            this.OK.Location = new System.Drawing.Point(234, 362);
             this.OK.Name = "OK";
             this.OK.Size = new System.Drawing.Size(75, 23);
             this.OK.TabIndex = 9;
@@ -125,11 +131,68 @@
             this.m_nc.TabIndex = 10;
             this.m_nc.Text = "0";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(234, 276);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(149, 17);
+            this.label15.TabIndex = 63;
+            this.label15.Text = "Ид. трансформаторы";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(234, 246);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(46, 17);
+            this.label7.TabIndex = 62;
+            this.label7.Text = "ИНУТ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(233, 215);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 17);
+            this.label5.TabIndex = 61;
+            this.label5.Text = "ИНУН";
+            // 
+            // m_neu
+            // 
+            this.m_neu.Location = new System.Drawing.Point(45, 212);
+            this.m_neu.Name = "m_neu";
+            this.m_neu.Size = new System.Drawing.Size(100, 22);
+            this.m_neu.TabIndex = 60;
+            this.m_neu.Text = "0";
+            // 
+            // m_nei
+            // 
+            this.m_nei.Location = new System.Drawing.Point(45, 243);
+            this.m_nei.Name = "m_nei";
+            this.m_nei.Size = new System.Drawing.Size(100, 22);
+            this.m_nei.TabIndex = 59;
+            this.m_nei.Text = "0";
+            // 
+            // m_ntri
+            // 
+            this.m_ntri.Location = new System.Drawing.Point(45, 271);
+            this.m_ntri.Name = "m_ntri";
+            this.m_ntri.Size = new System.Drawing.Size(100, 22);
+            this.m_ntri.TabIndex = 58;
+            this.m_ntri.Text = "0";
+            // 
             // SIZE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.m_neu);
+            this.Controls.Add(this.m_nei);
+            this.Controls.Add(this.m_ntri);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.m_nl);
             this.Controls.Add(this.label3);
@@ -157,5 +220,11 @@
         private System.Windows.Forms.TextBox m_nl;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox m_nc;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox m_neu;
+        private System.Windows.Forms.TextBox m_nei;
+        private System.Windows.Forms.TextBox m_ntri;
     }
 }

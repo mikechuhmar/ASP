@@ -53,6 +53,18 @@
       <DependentUpon>C.cs</DependentUpon>
     </Compile>
     <Compile Include="Complex.cs" />
+    <Compile Include="EI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EI.Designer.cs">
+      <DependentUpon>EI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EU.Designer.cs">
+      <DependentUpon>EU.cs</DependentUpon>
+    </Compile>
     <Compile Include="F.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,8 +128,20 @@
     <Compile Include="SIZE.Designer.cs">
       <DependentUpon>SIZE.cs</DependentUpon>
     </Compile>
+    <Compile Include="TRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TRI.Designer.cs">
+      <DependentUpon>TRI.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="C.resx">
       <DependentUpon>C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EI.resx">
+      <DependentUpon>EI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EU.resx">
+      <DependentUpon>EU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F.resx">
       <DependentUpon>F.cs</DependentUpon>
@@ -154,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SIZE.resx">
       <DependentUpon>SIZE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TRI.resx">
+      <DependentUpon>TRI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

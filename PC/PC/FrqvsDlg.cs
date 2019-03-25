@@ -34,7 +34,7 @@ namespace PC
                 ir.ShowDialog(this);
                 ir.Dispose();
             }
-            //...
+            //2 лаб
             if (GV.nl > 0)
             {
                 L il = new L();
@@ -46,6 +46,27 @@ namespace PC
                 C ic = new C();
                 ic.ShowDialog(this);
                 ic.Dispose();
+            }
+            //3 лаб
+            if (GV.neu > 0)
+            {
+                EU ieu = new EU();
+                ieu.ShowDialog(this);
+                ieu.Dispose();
+            }
+
+            if (GV.nei > 0)
+            {
+                EI iei = new EI();
+                iei.ShowDialog(this);
+                iei.Dispose();
+            }
+
+            if (GV.ntri > 0)
+            {
+                TRI itri = new TRI();
+                itri.ShowDialog(this);
+                itri.Dispose();
             }
             DialogResult res = MessageBox.Show("Выводить описание схемы в файл?",
                 "Вывод в файл", MessageBoxButtons.YesNo);
@@ -153,10 +174,20 @@ namespace PC
 
                 GV.n = GV.nv;
 
-                form_d(ref GV.in_r, ref GV.z_r, GV.nr, 'R');
-                form_d(ref GV.in_c, ref GV.z_c, GV.nc, 'C');
-                form_d(ref GV.in_l, ref GV.z_l, GV.nl,  'L');
-
+                if (GV.nr != 0)
+                    form_d(ref GV.in_r, ref GV.z_r, GV.nr, 'R');
+                //2 лаба
+                if (GV.nc != 0)
+                    form_d(ref GV.in_c, ref GV.z_c, GV.nc, 'C');
+                if (GV.nl != 0)
+                    form_d(ref GV.in_l, ref GV.z_l, GV.nl,  'L');
+                //3 лаба
+                if (GV.neu != 0)
+                    form_eu();
+                if (GV.nei != 0)
+                    form_ei();
+                if (GV.ntri != 0)
+                    form_tri();
                 //...
                 form_s();
                 if ((GV.lp == 1) && (GV.lm == 0) && (GV.kp == 2) && (GV.km == 0))

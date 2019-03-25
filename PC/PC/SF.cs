@@ -149,8 +149,76 @@ namespace PC
                     fout.WriteLine(str);
                 }
             }
-            //...
-
+            //Описание индуктивностей
+            if (GV.nl != 0)
+            {
+                str = "Индуктивности";
+                fout.WriteLine(str);
+                str = String.Format("            n+         n-      R(ком)");
+                fout.WriteLine(str);
+                for (int kl = 1; kl <= GV.nl; kl++)
+                {
+                    str = String.Format("L{0:D}{1,10:D}{2,10:D}{3,10:F}",
+                        kl, GV.in_l[kl, 0], GV.in_l[kl, 1], GV.z_l[kl]);
+                    fout.WriteLine(str);
+                }
+            }
+            //Описание конденсаторов
+            if (GV.nr != 0)
+            {
+                str = "Конденсаторы";
+                fout.WriteLine(str);
+                str = String.Format("            n+         n-      R(ком)");
+                fout.WriteLine(str);
+                for (int kr = 1; kr <= GV.nc; kr++)
+                {
+                    str = String.Format("C{0:D}{1,10:D}{2,10:D}{3,10:F}",
+                        kr, GV.in_c[kr, 0], GV.in_c[kr, 1], GV.z_c[kr]);
+                    fout.WriteLine(str);
+                }
+            }
+            //Описание ИНУТ
+            if (GV.nei != 0)
+            {
+                str = "ИНУТ";
+                fout.WriteLine(str);
+                str = String.Format("            n1+       n1-      n2+		n2- 	z(В/мА) 	T1 	T2");
+                fout.WriteLine(str);
+                for (int kr = 1; kr <= GV.nei; kr++)
+                {
+                    str = String.Format("JI{0:D}{1,10:D}{2,10:D}{3,10:D}{4,10:D}{5,10:F}{6,10:F}{7,10:F}",
+                        kr, GV.in_ei[kr, 0], GV.in_ei[kr, 1], GV.in_ei[kr, 2], GV.in_ei[kr, 3], GV.z_ei[kr, 0], GV.z_ei[kr, 1], GV.z_ei[kr, 2]);
+                    fout.WriteLine(str);
+                }
+            }
+            //Описание ИНУН
+            if (GV.neu != 0)
+            {
+                str = "ИНУН";
+                fout.WriteLine(str);
+                str = String.Format("           n1+        n1-       n2+		n2-		m() 	T1 	T2");
+                fout.WriteLine(str);
+                for (int kr = 1; kr <= GV.neu; kr++)
+                {
+                    str = String.Format("JU{0:D}{1,10:D}{2,10:D}{3,10:D}{4,10:D}{5,10:F}{6,10:F}{7,10:F}",
+                        kr, GV.in_eu[kr, 0], GV.in_eu[kr, 1], GV.in_eu[kr, 2], GV.in_eu[kr, 3], GV.z_eu[kr, 0], GV.z_eu[kr, 1], GV.z_eu[kr, 2]);
+                    fout.WriteLine(str);
+                }
+            }
+            //Описание идеальных трансформаторов
+            if (GV.ntri != 0)
+            {
+                str = "Трансформаторы";
+                fout.WriteLine(str);
+                str = String.Format("            n1+       n1-      n2+		n2- 	Коэффициент n");
+                fout.WriteLine(str);
+                for (int kr = 1; kr <= GV.ntri; kr++)
+                {
+                    str = String.Format("TRI{0:D}{1,10:D}{2,10:D}{3,10:D}{4,10:D}{5,10:F}",
+                        kr, GV.in_tri[kr, 0], GV.in_tri[kr, 1], GV.in_tri[kr, 2], GV.in_tri[kr, 3], GV.z_tri[kr]);
+                    fout.WriteLine(str);
+                }
+            }
 
             str = "Результаты моделирования";
             fout.WriteLine(str);
