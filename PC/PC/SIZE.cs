@@ -28,6 +28,8 @@ namespace PC
             GV.neu = Int32.Parse(m_neu.Text);
             GV.ntri = Int32.Parse(m_ntri.Text);
             GV.nei = Int32.Parse(m_nei.Text);
+            //4 lab
+            GV.nou = Int32.Parse(m_nou.Text);
             this.Close();
         }
     }

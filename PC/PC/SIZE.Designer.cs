@@ -43,6 +43,8 @@
             this.m_neu = new System.Windows.Forms.TextBox();
             this.m_nei = new System.Windows.Forms.TextBox();
             this.m_ntri = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.m_nou = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // OK
@@ -182,11 +184,30 @@
             this.m_ntri.TabIndex = 58;
             this.m_ntri.Text = "0";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(234, 316);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(116, 17);
+            this.label11.TabIndex = 65;
+            this.label11.Text = "Опер.усилители";
+            // 
+            // m_nou
+            // 
+            this.m_nou.Location = new System.Drawing.Point(45, 311);
+            this.m_nou.Name = "m_nou";
+            this.m_nou.Size = new System.Drawing.Size(100, 22);
+            this.m_nou.TabIndex = 64;
+            this.m_nou.Text = "0";
+            // 
             // SIZE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.m_nou);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -226,5 +247,7 @@
         private System.Windows.Forms.TextBox m_neu;
         private System.Windows.Forms.TextBox m_nei;
         private System.Windows.Forms.TextBox m_ntri;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox m_nou;
     }
 }

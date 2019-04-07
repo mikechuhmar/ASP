@@ -68,6 +68,13 @@ namespace PC
                 itri.ShowDialog(this);
                 itri.Dispose();
             }
+            //4 lab
+            if (GV.nou > 0)
+            {
+                OU iou = new OU();
+                iou.ShowDialog(this);
+                iou.Dispose();
+            }
             DialogResult res = MessageBox.Show("Выводить описание схемы в файл?",
                 "Вывод в файл", MessageBoxButtons.YesNo);
             if (res == DialogResult.Yes)
@@ -188,6 +195,9 @@ namespace PC
                     form_ei();
                 if (GV.ntri != 0)
                     form_tri();
+                //4 lab
+                if (GV.nou != 0)
+                    form_ou();
                 //...
                 form_s();
                 if ((GV.lp == 1) && (GV.lm == 0) && (GV.kp == 2) && (GV.km == 0))
